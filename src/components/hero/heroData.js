@@ -37,6 +37,6 @@ export const floatingBadges = [
 
 export const socials = [
   // { name: 'instagram', href: 'https://instagram.com/' },
-  { name: 'github', href: 'https://github.com/' },
+  { name: 'github', href: 'https://github.com/GBhanuPrakashReddy6' },
   { name: 'linkedin', href: 'https://www.linkedin.com/in/bhanuprakash0225/' },
 ]
