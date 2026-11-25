@@ -1,0 +1,13 @@
+Where to put your files (until they exist, the page shows placeholders):
+
+  public/hero/profile.png          your photo (transparent PNG works best)
+  public/hero/logo.png             small round logo, top-left (optional)
+  public/cv.pdf                    your CV for the "Download CV" button
+  public/services/api.jpg          service slide images (names set in
+  public/services/database.jpg       src/components/services/servicesData.js)
+  public/services/architecture.jpg
+  public/services/cloud.jpg
+  public/projects/project-1.jpg    project screenshots (names set in
+  ... project-6.jpg                  src/components/projects/projectsData.js)
+
+Text for each section is in the *Data.js file inside that section's folder in src/components/.

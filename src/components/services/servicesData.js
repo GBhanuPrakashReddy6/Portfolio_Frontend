@@ -1,0 +1,107 @@
+// Images go in public/services/ (leave empty to show the animated code card instead)
+export const services = [
+  {
+    title: 'REST API Development',
+    description: 'Designing and building secure, well-documented REST APIs with Spring Boot that other teams love to use.',
+    features: [
+      'Spring Boot & Spring MVC REST APIs',
+      'Spring Security with JWT / OAuth2',
+      'OpenAPI (Swagger) documentation',
+      'Validation, error handling & versioning',
+    ],
+    tags: ['#Java', '#SpringBoot', '#REST'],
+    image: '',
+    code: [
+      '@RestController',
+      '@RequestMapping("/api/orders")',
+      'public class OrderController {',
+      '  @GetMapping("/{id}")',
+      '  public Order get(@PathVariable Long id) {',
+      '    return service.findById(id);',
+      '  }',
+      '}',
+    ],
+  },
+  {
+    title: 'Microservices Architecture',
+    description: 'Splitting systems into reliable, independently deployable services that scale with your business.',
+    features: [
+      'Spring Cloud (Gateway, Config, Eureka)',
+      'Event-driven messaging with Kafka',
+      'Resilience4j circuit breakers & retries',
+      'Distributed tracing & logging',
+    ],
+    tags: ['#Microservices', '#Kafka', '#SpringCloud'],
+    image: '',
+    code: [
+      '@Service',
+      'public class PaymentListener {',
+      '  @KafkaListener(topics = "orders")',
+      '  public void onOrder(OrderEvent e) {',
+      '    payments.charge(e.orderId());',
+      '  }',
+      '}',
+    ],
+  },
+  {
+    title: 'Database Design & JPA',
+    description: 'Modelling data and tuning queries so your application stays fast as your data grows.',
+    features: [
+      'Spring Data JPA & Hibernate',
+      'PostgreSQL / MySQL schema design',
+      'Query optimization, indexing & caching (Redis)',
+      'Flyway / Liquibase migrations',
+    ],
+    tags: ['#JPA', '#PostgreSQL', '#Redis'],
+    image: '',
+    code: [
+      '@Entity',
+      'public class Customer {',
+      '  @Id @GeneratedValue',
+      '  private Long id;',
+      '  @OneToMany(mappedBy = "customer")',
+      '  private List<Order> orders;',
+      '}',
+    ],
+  },
+  {
+    title: 'Cloud, CI/CD & Testing',
+    description: 'Shipping Java services to production with automated tests, containers and repeatable pipelines.',
+    features: [
+      'JUnit 5, Mockito & Testcontainers',
+      'Docker & Kubernetes deployments',
+      'CI/CD with GitHub Actions / Jenkins',
+      'Monitoring with Actuator & Prometheus',
+    ],
+    tags: ['#Docker', '#Kubernetes', '#JUnit'],
+    image: '',
+    code: [
+      '@SpringBootTest',
+      'class OrderServiceTest {',
+      '  @Test',
+      '  void createsOrder() {',
+      '    var o = service.create(req);',
+      '    assertThat(o.status()).isEqualTo(NEW);',
+      '  }',
+      '}',
+    ],
+  },
+]
+
+const devicon = (path) => `https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/${path}`
+
+export const techStack = [
+  { name: 'Java', icon: devicon('java/java-original.svg') },
+  { name: 'Spring', icon: devicon('spring/spring-original.svg') },
+  { name: 'Hibernate', icon: devicon('hibernate/hibernate-original.svg') },
+  { name: 'PostgreSQL', icon: devicon('postgresql/postgresql-original.svg') },
+  { name: 'MySQL', icon: devicon('mysql/mysql-original.svg') },
+  { name: 'Kafka', icon: devicon('apachekafka/apachekafka-original.svg') },
+  { name: 'Redis', icon: devicon('redis/redis-original.svg') },
+  { name: 'Docker', icon: devicon('docker/docker-original.svg') },
+  { name: 'Kubernetes', icon: devicon('kubernetes/kubernetes-original.svg') },
+  { name: 'Maven', icon: devicon('maven/maven-original.svg') },
+  { name: 'JUnit', icon: devicon('junit/junit-original.svg') },
+  { name: 'Git', icon: devicon('git/git-original.svg') },
+  { name: 'IntelliJ', icon: devicon('intellij/intellij-original.svg') },
+]
