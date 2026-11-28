@@ -12,6 +12,12 @@ export default defineConfig({
     vueDevTools(),
     tailwindcss(),
   ],
+  server: {
+    // Forward API calls to the Spring Boot backend during development
+    proxy: {
+      '/api': 'http://localhost:8080',
+    },
+  },
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
